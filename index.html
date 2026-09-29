@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe Ejecutivo de Prospecto Foráneo - Coahuila Sureste</title>
+    <style>
+        :root {
+            --primary: #0A192F;
+            --secondary: #1E2D42;
+            --accent: #C5A059;
+            --text-dark: #2D3748;
+            --text-muted: #4A5568;
+            --light-bg: #F4F6F9;
+            --white: #FFFFFF;
+            --border: #E2E8F0;
+            
+            /* Paleta WhatsApp */
+            --wa-bg: #E5DDD5;
+            --wa-header: #075E54;
+            --wa-incoming: #FFFFFF;
+            --wa-outgoing: #DCF8C6;
+            --wa-text: #111111;
+            --wa-time: #777777;
+            --wa-system: #FFF5C4;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: var(--white);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 25px 15px;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        header p {
+            color: var(--accent);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        header h1 {
+            font-size: clamp(18px, 4vw, 28px);
+            font-weight: 600;
+            color: var(--white);
+            line-height: 1.3;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            background: var(--secondary);
+            padding: 20px 15px;
+            color: var(--white);
+            font-size: 13px;
+        }
+
+        .meta-item strong {
+            display: block;
+            color: var(--accent);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+
+        .content {
+            padding: 20px 15px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 15px;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 16px;
+            background: var(--accent);
+            margin-right: 10px;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 15px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            height: 100%;
+        }
+
+        .card h4 {
+            margin-bottom: 8px;
+            color: var(--primary);
+            font-size: 14px;
+        }
+
+        .card p, .card ul, .card ol {
+            font-size: 13.5px;
+            color: var(--text-muted);
+        }
+
+        ul, ol {
+            padding-left: 18px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-top: 10px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13.5px;
+            min-width: 480px;
+        }
+
+        th {
+            background: var(--secondary);
+            color: var(--white);
+            text-align: left;
+            padding: 10px 12px;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-muted);
+        }
+
+        tr:nth-child(even) {
+            background-color: #F8FAFC;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .highlight-box {
+            background: #FAF8F5;
+            border-left: 4px solid var(--accent);
+            padding: 12px;
+            border-radius: 0 6px 6px 0;
+            margin-top: 12px;
+        }
+
+        .highlight-box p {
+            font-size: 13.5px;
+            color: var(--text-dark);
+        }
+
+        .status-tag {
+            display: inline-block;
+            background: #EBF8FF;
+            color: #2B6CB0;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        /* ESTILOS SIMULADOR WHATSAPP RESPONSIVO */
+        .whatsapp-container {
+            background-color: var(--wa-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .wa-header {
+            background-color: var(--wa-header);
+            color: var(--white);
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .wa-avatar {
+            width: 36px;
+            height: 36px;
+            background-color: #128C7E;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 15px;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .wa-contact-info h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .wa-contact-info p {
+            font-size: 11px;
+            opacity: 0.85;
+            margin: 0;
+        }
+
+        .wa-body {
+            padding: 12px 10px;
+            max-height: 550px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-image: radial-gradient(#d1c7bd 1px, transparent 0);
+            background-size: 12px 12px;
+        }
+
+        .wa-system-msg {
+            background-color: var(--wa-system);
+            color: #555;
+            font-size: 11px;
+            text-align: center;
+            padding: 6px 10px;
+            border-radius: 6px;
+            margin: 4px auto;
+            max-width: 95%;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+            line-height: 1.3;
+        }
+
+        .wa-date-divider {
+            background-color: rgba(225, 245, 254, 0.92);
+            color: #4A5568;
+            font-size: 10.5px;
+            font-weight: 600;
+            text-align: center;
+            padding: 4px 10px;
+            border-radius: 8px;
+            margin: 6px auto;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.08);
+            text-transform: uppercase;
+        }
+
+        .wa-msg {
+            max-width: 88%;
+            padding: 8px 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            position: relative;
+            word-break: break-word;
+            overflow-wrap: break-word;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+            line-height: 1.4;
+        }
+
+        .wa-incoming {
+            background-color: var(--wa-incoming);
+            align-self: flex-start;
+            border-top-left-radius: 0;
+        }
+
+        .wa-outgoing {
+            background-color: var(--wa-outgoing);
+            align-self: flex-end;
+            border-top-right-radius: 0;
+        }
+
+        .wa-time {
+            font-size: 9.5px;
+            color: var(--wa-time);
+            float: right;
+            margin-left: 8px;
+            margin-top: 4px;
+            white-space: nowrap;
+        }
+
+        .wa-media-placeholder {
+            background: #E2E8F0;
+            border-radius: 6px;
+            padding: 6px 10px;
+            font-style: italic;
+            font-size: 11.5px;
+            color: #4A5568;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 4px;
+        }
+
+        footer {
+            background: var(--light-bg);
+            border-top: 1px solid var(--border);
+            padding: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        @media (min-width: 768px) {
+            body { padding: 30px 20px; }
+            header { padding: 40px 40px; }
+            .meta-grid { padding: 20px 40px; font-size: 14px; }
+            .content { padding: 35px 40px; }
+            .section-title { font-size: 16px; }
+            .card p, .card ul, .card ol { font-size: 14px; }
+            .wa-msg { max-width: 78%; font-size: 13.5px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <p>Informe Ejecutivo de Prospecto Foráneo</p>
+        <h1>Master Plan: Centro Clínico, Social y Ecológico</h1>
+    </header>
+
+    <div class="meta-grid">
+        <div class="meta-item">
+            <strong>Ubicación del Proyecto</strong>
+            Saltillo, Coahuila
+        </div>
+        <div class="meta-item">
+            <strong>Cliente Institucional</strong>
+            Ayuda Psicológica y Emocional - Coahuila Sureste, A.C.
+        </div>
+        <div class="meta-item">
+            <strong>Representante Legal</strong>
+            Antonio (Presidente) | +52 844 156 1234
+        </div>
+        <div class="meta-item">
+            <strong>Estatus Comercial</strong>
+            <span class="status-tag">En Cotización / Espera de Polígono</span>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- RESUMEN DE OPORTUNIDAD -->
+        <div class="section">
+            <div class="section-title">1. Resumen Ejecutivo y Oportunidad Comercial</div>
+            <div class="grid-2">
+                <div class="card">
+                    <h4>Causa Social</h4>
+                    <p>La A.C. requiere desarrollar un complejo integral de alto impacto para la prevención del suicidio, atención a adicciones y salud mental en la región de Saltillo.</p>
+                </div>
+                <div class="card">
+                    <h4>Estrategia de Negocio en 2 Fases</h4>
+                    <ul>
+                        <li><strong>Fase Inmediata:</strong> Contratación del Plan Maestro, Anteproyecto, Renders 3D y Dossier Ejecutivo para la gestión de fondos e inversión institucional por parte de la A.C.</li>
+                        <li><strong>Fase Secundaria:</strong> Opción preferente para la contratación del Proyecto Ejecutivo integral, gerencia y edificación.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROGRAMA ARQUITECTÓNICO -->
+        <div class="section">
+            <div class="section-title">2. Programa Arquitectónico General (+50 Hectáreas)</div>
+            <div class="grid-4">
+                <div class="card">
+                    <h4>Eje Clínico</h4>
+                    <p>Clínica de Consulta Externa (Psicología/Consejería).</p>
+                    <p style="margin-top: 8px;"><strong>Capacidad:</strong> 30 consultorios (2 turnos) / 100 pacientes diarios.</p>
+                </div>
+                <div class="card">
+                    <h4>Eje Comunitario</h4>
+                    <p>Auditorio masivo para conferencias y talleres familiares.</p>
+                    <p style="margin-top: 8px;"><strong>Capacidad:</strong> 1,000 personas sentadas.</p>
+                </div>
+                <div class="card">
+                    <h4>Eje Ecológico / Deportivo</h4>
+                    <p>Parque natural (senderismo, rapel, bike park) y canchas deportivas.</p>
+                    <p style="margin-top: 8px;"><strong>Alcance:</strong> Reserva protegida.</p>
+                </div>
+                <div class="card">
+                    <h4>Eje Espiritual</h4>
+                    <p>Templo / Capilla integrada para apoyo social y contención familiar.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ESTRATEGIA TERRITORIAL -->
+        <div class="section">
+            <div class="section-title">3. Análisis Territorial y Emplazamiento Estratégico</div>
+            <div class="card">
+                <p style="margin-bottom: 12px;"><strong>Certeza Jurídica & Entorno:</strong> Propiedad privada en zona suburbana (no ejidal) con acceso a servicios básicos, colindante con la Sierra de Zapalinamé (zona protegida por decreto estatal).</p>
+                
+                <div class="highlight-box">
+                    <p style="font-weight: 600; margin-bottom: 6px;">Estrategia de Zonificación Propuesta (3 Hectáreas Urbana / +47 Hectáreas Reserva):</p>
+                    <ul>
+                        <li><strong>Zona A (Clínica / 0.5 ha):</strong> Emplazada en zona aislada acústicamente para garantizar la privacidad y serenidad del paciente.</li>
+                        <li><strong>Zona B (Auditorio y Servicios / 2.5 ha):</strong> Ubicada directamente a la vialidad principal para absorber los flujos vehiculares e itinerarios masivos sin interferir con la clínica.</li>
+                        <li><strong>Zona C (Reserva / +47 ha):</strong> Conservación y turismo de bajo impacto (deportes de montaña y senderismo).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIABILIDAD NORMATIVA -->
+        <div class="section">
+            <div class="section-title">4. Viabilidad Técnica y Normativa (COFEPRIS)</div>
+            <div class="grid-2">
+                <div class="card">
+                    <h4>Suficiencia Sanitaria (NOM-005-SSA3-2010)</h4>
+                    <p>Al configurarse strictly como <strong>Consulta Externa</strong> y no como hospital o internamiento (NOM-016 / NOM-028), el proyecto reduce su complejidad técnica. Se eliminan requerimientos de dormitorios, comedores industriales, áreas de desintoxicación o manejo masivo de residuos RPBI.</p>
+                </div>
+                <div class="card">
+                    <h4>Protección Civil e Impacto Vial</h4>
+                    <p>El auditorio para 1,000 personas requerirá un análisis especial de evacuación, cálculo estructural de claros amplios y un área de estacionamiento con proporciones adecuadas (mínimo 150 a 200 cajones) dentro de las 2.5 hectáreas destinadas al equipamiento.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ESTIMACIÓN PARAMÉTRICA -->
+        <div class="section">
+            <div class="section-title">5. Estimación Paramétrica del Valor de Obra</div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rubro de Infraestructura</th>
+                            <th>Área Estimada</th>
+                            <th>Inversión Proyectada (MXN)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Clínica de Consulta Externa</strong></td>
+                            <td>1,000 - 1,200 m²</td>
+                            <td>$16.0 M - $26.4 M</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Auditorio Masivo (1,000 pax)</strong></td>
+                            <td>1,200 - 1,500 m²</td>
+                            <td>$21.6 M - $37.5 M</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Templo / Capilla</strong></td>
+                            <td>300 - 500 m²</td>
+                            <td>$4.2 M - $10.0 M</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Áreas Deportivas & Bike Park</strong></td>
+                            <td>Cancha + Senderos</td>
+                            <td>$2.0 M - $4.7 M</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Urbanización & Estacionamiento</strong></td>
+                            <td>Vialidades e Iluminación</td>
+                            <td>$8.0 M - $15.0 M</td>
+                        </tr>
+                        <tr style="background: #EDF2F7; font-weight: bold; color: var(--primary);">
+                            <td>ESTIMADO GLOBAL DE EDIFICACIÓN</td>
+                            <td>—</td>
+                            <td>$51.8 M a $93.6 M MXN</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- PRÓXIMOS PASOS -->
+        <div class="section">
+            <div class="section-title">6. Ruta Operativa y Cierre Comercial</div>
+            <div class="card">
+                <ol>
+                    <li style="margin-bottom: 10px;"><strong>Recepción de Plano Topográfico:</strong> El cliente (Antonio) se encuentra concluyendo la entrega del levantamiento del polígono.</li>
+                    <li style="margin-bottom: 10px;"><strong>Emisión de Propuesta Económica:</strong> Formalización de la oferta comercial por concepto de Honorarios de Master Plan y Conceptualización Visual 3D.</li>
+                    <li><strong>Presentación al Consejo de la A.C.:</strong> Firma del contrato de diseño conceptual para arranque de proyectos.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- SIMULADOR WHATSAPP DE CONVERSACIÓN COMPLETA -->
+        <div class="section">
+            <div class="section-title">7. Evidencia e Inspección de la Conversación (Chat Completo)</div>
+            
+            <div class="whatsapp-container">
+                <div class="wa-header">
+                    <div class="wa-avatar">A</div>
+                    <div class="wa-contact-info">
+                        <h3>Antonio (Presidente A.C.)</h3>
+                        <p>+52 1 844 156 1234 — En línea</p>
+                    </div>
+                </div>
+
+                <div class="wa-body">
+                    <div class="wa-system-msg">
+                        🔒 Los mensajes y las llamadas están cifrados de extremo a extremo. Nadie fuera de este chat, ni siquiera WhatsApp, puede leerlos ni escucharlos.
+                    </div>
+
+                    <div class="wa-date-divider">28 de septiembre de 2026</div>
+
+                    <div class="wa-msg wa-incoming">
+                        ¡Hola! Quiero más información
+                        <span class="wa-time">11:55 PM</span>
+                    </div>
+
+                    <div class="wa-date-divider">29 de septiembre de 2026</div>
+
+                    <div class="wa-msg wa-outgoing">
+                        Hola con gusto donde se encuentra su terreno y que desea construir?
+                        <span class="wa-time">12:33 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Saltillo Coahuila y el proyecto es una clínica de salud mental y un parque ECOLÓGICO somos una asociación civil
+                        <span class="wa-time">12:34 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        Muy bien tiene algo avanzado planos o algún proceso ?
+                        <span class="wa-time">08:23 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Estoy en éso, ví tu información en facebook y me interesó, como presupuestas, manejas opciones de presentación, render, o cómo es tu forma de proyectos
+                        <span class="wa-time">08:25 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        Si contamos con el servicio integral desde 0 planos permisos construcción
+                        <span class="wa-time">08:27 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        Que presupuesto tienen destinado como tope para ese proyecto
+                        <span class="wa-time">08:27 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Y cuánto cuesta una proyección para solicitar un financiamiento
+                        <span class="wa-time">08:27 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        Sería capital de la empresa más financiamiento bancario?
+                        <span class="wa-time">08:28 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Es un proyecto para combatir enfermedades mentales y prevención de suicidio, no tengo un tope
+                        <span class="wa-time">08:29 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        SOY una asociación civil
+                        <span class="wa-time">08:29 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        Ok tiene las medidas de su terreno y la dirección para revisarla en el mapa
+                        <span class="wa-time">08:33 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        Y conocer la capacidad que puede tener la clínica en construcción
+                        <span class="wa-time">08:34 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        <div class="wa-media-placeholder">📄 Ficha_tecnica_10 10.pdf</div>
+                        <span class="wa-time">08:36 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        Es un ejemplo
+                        <span class="wa-time">08:36 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Estoy en la medición del terreno y valuación del mismo
+                        <span class="wa-time">08:37 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        La clínica es de salud mental y adicciones
+                        <span class="wa-time">08:39 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Es un proyecto que se va a ir desarrollando, tristemente en la localidad de Saltillo Coahuila va en incremento el suicidio y los factores son diversos
+                        <span class="wa-time">08:40 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        Y los terrenos tienen escritura o son ejidales
+                        <span class="wa-time">08:46 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Están en zona suburbana, no son ejidales
+                        <span class="wa-time">08:48 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        el lugar ya cuenta con servicios basicos
+                        <span class="wa-time">09:09 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Si son más de 50 hectáreas es para un parque ecológico
+                        <span class="wa-time">09:10 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        y cuanto de ese espacio le destinaran a la clinica
+                        <span class="wa-time">09:14 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Una hectáreas o más si se requiere
+                        <span class="wa-time">09:16 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        <div class="wa-media-placeholder">📷 Imagen adjunta</div>
+                        el parque ecologico lo quieren construir algo asi?
+                        <span class="wa-time">09:18 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Es zona protegida por decreto, no puedo modificar, la naturaleza, es montañismo, rapel, senderismo bicicleta de montaña
+                        <span class="wa-time">09:20 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        ok entonces en esa zona no construirian nada
+                        <span class="wa-time">09:23 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        🔗 <a href="https://vt.tiktok.com/ZSbB6KHne/" target="_blank" style="color:#0288d1;">https://vt.tiktok.com/ZSbB6KHne/</a> cañón de los pericos
+                        <span class="wa-time">09:24 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        🔗 <a href="https://vt.tiktok.com/ZSbBMUePw/" target="_blank" style="color:#0288d1;">https://vt.tiktok.com/ZSbBMUePw/</a> otro video
+                        <span class="wa-time">09:29 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        Y esa hectárea donde desean hacer la clínica es terreno plano
+                        <span class="wa-time">09:32 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        O es sobre montaña
+                        <span class="wa-time">09:32 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Parte es plano y llega la propiedad hasta el filo de la sierra de zapalinme
+                        <span class="wa-time">09:33 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        Cuantos pacientes tienen contemplado atender
+                        <span class="wa-time">09:35 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        <div class="wa-media-placeholder">📷 Imagen adjunta</div>
+                        <span class="wa-time">09:43 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        DIARIOS APROXIMADAMENTE 100, EN 30 CONSILTORIOS, DOS TURNOS
+                        <span class="wa-time">09:44 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        📍 <a href="https://maps.app.goo.gl/j6sHS2FgreJubGe88?g_st=aw" target="_blank" style="color:#0288d1;">Ubicación de Google Maps</a>
+                        <span class="wa-time">09:44 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        <div class="wa-media-placeholder">📷 Imagen adjunta</div>
+                        Sería ahí
+                        <span class="wa-time">09:46 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Así es
+                        <span class="wa-time">10:01 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        Necesito que me apoye porfa contestando estas preguntas 📋 Cuestionario de Diagnóstico Normativo (Programa Médico-Arquitectónico)<br>
+                        *1. Definición del Modelo de Operación (Clave para COFEPRIS y COS Municipal)*<br>
+                        • La pregunta: *“Para el desarrollo de la proyección financiera, ¿el centro operará bajo un modelo residencial (internamiento de los pacientes) o será exclusivamente de consulta externa (terapias de entrada por salida)?”*<br>
+                        • Por qué importa: Si es residencial, la norma NOM-028-SSA2-2009 exige dormitorios con separaciones estrictas, comedores industriales, enfermerías 24/7 y un pabellón de desintoxicación. Si es consulta externa, solo necesitas consultorios, recepción y áreas administrativas, lo que reduce el tamaño del edificio en un 70%.
+                        <span class="wa-time">10:06 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        *2. Segmentación de la Población (Criterio de Seguridad y Diseño)*<br>
+                        • La pregunta: *“¿A qué perfil de población estará dirigido el centro? ¿Atenderán simultáneamente a hombres y mujeres, o adultos y menores de edad?”*<br>
+                        • Por qué importa: La ley prohíbe strictly mezclar poblaciones en áreas residenciales. Si atienden a ambos sexos o a menores de edad, físicamente debes diseñar alas o pisos completamente independientes y aislados, con sus propios módulos de baños y áreas de descanso para evitar sanciones.
+                        <span class="wa-time">10:08 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        *3. Servicios Clínicos y Legales Mínimos (NOM-016-SSA3-2012)*<br>
+                        • La pregunta: *“De acuerdo con los lineamientos de salud, además de los 30 consultorios de psicología y psiquiatría, ¿contarán con farmacia interna para el resguardo de medicamentos controlados (psicotrópicos) y un área destinada al almacenamiento temporal de residuos peligrosos biológico-infecciosos (RPBI)?”*<br>
+                        • Por qué importa: Ambos espacios son obligatorios por ley. La farmacia de controlados requiere especificaciones de seguridad constructiva (muros reforzados y doble chapa) y el RPBI necesita un cuarto exclusivo con ventilación independiente alejado de los pacientes.
+                        <span class="wa-time">10:09 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        *4. Certeza de la Poligonal y Restricciones Ambientales*<br>
+                        • La pregunta: *“Para que nuestro equipo de ingeniería pueda realizar el plano de conjunto a distancia, ¿cuentan ya con el levantamiento topográfico o las escrituras que detallen las medidas exactas de la hectárea? Asimismo, ¿el municipio ya les emitió el Dictamen de Alineamiento y Uso de Suelo para confirmar que se permite el equipamiento de salud?”*<br>
+                        • Por qué importa: Al estar pegados a la Sierra de Zapalinamé (zona protegida), necesitan saber exactamente qué porcentaje de la hectárea es plano y legalmente construible para no violar restricciones ambientales federales que puedan detener la obra más adelante.
+                        <span class="wa-time">10:10 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Sólo es consulta, no sería psiquiátrico
+                        <span class="wa-time">10:11 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        El decreto es estatal y hay suficiente tierra para la hectárea en sona habitable o construible
+                        <span class="wa-time">10:13 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        📋 Cuestionario Normativo para Clínica de Consulta Externa (NOM-005-SSA3-2010)<br>
+                        *5. Tipología de los 30 Consultorios (El núcleo del proyecto)*<br>
+                        • El cuestionamiento: *“Para el diseño interior bajo norma, ¿los 30 consultorios serán exclusivamente para psicología y consejería (que solo requieren área de entrevista con escritorio y sillones), o se integrará algún consultorio de psiquiatría o medicina general?”*<br>
+                        • El fundamento normativo: Los consultorios de psicología son de los más sencillos ante COFEPRIS. Sin embargo, si se incluye psiquiatría o medicina general, la norma exige por ley un área física de exploración (con báscula, mesa de exploración) y una toma de agua/lavamanos interna dentro del cuarto, lo que altera las ingenierías hidráulicas de la obra.
+                        <span class="wa-time">10:14 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Sólo psicóloga y consejería , un auditorio para la familia
+                        <span class="wa-time">10:16 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        *2. Dimensionamiento de las Salas de Espera y Sanitarios Públicos*<br>
+                        • El cuestionamiento:* “Con una proyección de 100 pacientes diarios fluyendo por el edificio, ¿las citas estarán estrictamente programadas por hora para mantener salas de espera compactas, o requerimos proyectar áreas de vestíbulo masivas para familiares y acompañantes?”*<br>
+                        • El fundamento normativo: En la consulta externa, la autoridad sanitaria vigila mucho que las salas de espera no se saturen. La norma exige un espacio de espera cómodo y un número de sanitarios públicos independientes (separados para hombres y mujeres) proporcional al flujo máximo simultáneo de personas que estarán en el edificio.
+                        <span class="wa-time">10:18 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Habrá una área de esparcimiento, parque pequeño, aún así es por hora cita
+                        <span class="wa-time">10:20 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        Respecto al auditorio para las familias, para poder realizar el cálculo estructural y de evacuación bajo norma, ¿qué capacidad máxima de personas tienen contemplada para este espacio (por ejemplo, 50, 100 o 150 personas)? Asimismo, ¿el auditorio se utilizará solo para conferencias los fines de semana o albergará talleres y dinámicas grupales simultáneas con la consulta diaria?”
+                        <span class="wa-time">10:20 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Mil PERSONAS
+                        <span class="wa-time">10:22 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        La distribución para que el proyecto les quede los mas viable posible para el financiamiento, pensamos en algo clave. Quien va a consulta de psicología necesita un entorno de mucho silencio y tranquilidad. Si metemos el auditorio de 1,000 personas en la misma hectárea, el movimiento de la gente y los carros le van a quitar toda la privacidad a los pacientes.<br>
+                        Aprovechando que ustedes tienen espacio de sobra con las 50 hectáreas del predio, nuestra recomendación técnica es crecer esa zona a 3 hectáreas en total. Podemos sembrar la clínica en media hectárea apartada del ruido, y usar las otras 2.5 hectáreas directas a la vialidad para recibir masivamente a las familias en el auditorio. De esta forma protegemos el parque ecológico por decreto y le damos una estructura súper sólida al plan maestro.
+                        <span class="wa-time">10:27 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        Si se pueden ampliar de esa manera
+                        <span class="wa-time">10:45 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Claro primero Dios, me entregan polígono, también se planea iglesia en la propiedad
+                        <span class="wa-time">10:46 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        Muy bien van adicionando poco a poco más construcciónes o las quieren realizar a la par
+                        <span class="wa-time">10:48 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Chanchas de futbol, baikparq, área deportiva en zona permitida
+                        <span class="wa-time">10:56 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        Los recursos se los liberarán obra por obra o puede liberarle el recurso para construir todos a la par
+                        <span class="wa-time">10:58 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Necesitamos presentar proyecto de éso depende, lo que ocupó saber es cuánto cobras por diseño de proyecto, estoy cotizando
+                        <span class="wa-time">10:59 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        Muy bien para cotizarte lo , que te ha parecido nuestra atención hasta ahora
+                        <span class="wa-time">11:01 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Bien gracias
+                        <span class="wa-time">11:01 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Todavía no me entregan PLANO topográfico para gráficamente explicar las necesidades del proyecto, teniéndolo me comunico gracias
+                        <span class="wa-time">11:02 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        perfecto quedo atento a recibir su plano topografico
+                        <span class="wa-time">11:03 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        Cómo se llama la asociación civil que hará esto posible para ponerla en mis registros y con quien tengo el gusto
+                        <span class="wa-time">11:14 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        AYUDA PSICOLÓGICA Y EMOCIONAL - COAHUILA SURESTE, AC
+                        <span class="wa-time">11:15 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        Podría apoyarme mencionando su cargo o puesto dentro de la organización
+                        <span class="wa-time">11:18 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-incoming">
+                        Presidente
+                        <span class="wa-time">11:18 AM</span>
+                    </div>
+
+                    <div class="wa-msg wa-outgoing">
+                        Muy bien para escribirlo en mi bitácora
+                        <span class="wa-time">11:18 AM</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>Documento Interno - Dosuno Arquitectura</footer>
+</div>
+
+</body>
+</html>
